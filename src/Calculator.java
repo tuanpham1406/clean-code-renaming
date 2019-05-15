@@ -1,16 +1,19 @@
 public class Calculator {
-
-    public static int calculate(int a, int b, char o) {
-        switch (o) {
+    public static final char ADDITION = '+';
+    public static final char SUBTRACTION = '-';
+    public static final char MULTIPLICATION = '*';
+    public static final char DIVISION = '/';
+    public static int calculate(int firstOperand, int sencondOperand, char operator) {
+        switch (operator) {
             case '+':
-                return a + b;
+                return firstOperand + sencondOperand;
             case '-':
-                return a - b;
+                return firstOperand - sencondOperand;
             case '*':
-                return a * b;
+                return firstOperand * sencondOperand;
             case '/':
-                if (b != 0)
-                    return a / b;
+                if (sencondOperand != 0)
+                    return firstOperand / sencondOperand;
                 else
                     throw new RuntimeException("Can not divide by 0");
             default:
