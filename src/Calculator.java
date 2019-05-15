@@ -5,13 +5,13 @@ public class Calculator {
     public static final char DIVISION = '/';
     public static int calculate(int firstOperand, int sencondOperand, char operator) {
         switch (operator) {
-            case '+':
+            case ADDITION:
                 return firstOperand + sencondOperand;
-            case '-':
+            case SUBTRACTION:
                 return firstOperand - sencondOperand;
-            case '*':
+            case MULTIPLICATION:
                 return firstOperand * sencondOperand;
-            case '/':
+            case DIVISION:
                 if (sencondOperand != 0)
                     return firstOperand / sencondOperand;
                 else
